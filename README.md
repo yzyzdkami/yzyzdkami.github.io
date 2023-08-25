@@ -1,1 +1,2 @@
-# yzyzdkami.github.io
+# yzyzdkami的奇怪小站
+这里都是些奇怪的东西 ，不定期更新

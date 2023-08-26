@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>点一下臭一下</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #playButton {
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <img id="playButton" src="play-button.png" alt="muli">
+  <audio id="audio" src="muliaudio.mp3"></audio>
+  <script>
+    const playButton = document.getElementById('playButton');
+    const audio = document.getElementById('audio');
+
+    let isPlaying = false;
+
+    playButton.addEventListener('click', () => {
+      if (!isPlaying) {
+        audio.play();
+        isPlaying = true;
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        isPlaying = false;
+      }
+    });
+  </script>
+</body>
+</html>
